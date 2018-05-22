@@ -119,7 +119,7 @@ $(document).ready(() => {
 		// Need to be promise to wait for the request to be done
 		return new Promise ((resolve, reject) => {
 			// Define url get item in server
-			const urlGetProductById = `http://localhost:3000/products/${cartItems.cartProductId}`
+			const urlGetProductById = `https://featherworld.cloudxier.com/products/${cartItems.cartProductId}`
 			// Axios get the item from database
 			axios({
 				method: 'get',
@@ -178,7 +178,7 @@ $(document).ready(() => {
 	// Get data user by email from database (user checking purpose)
 	getUserByEmail = (email) => {
 		return new Promise ((resolve, reject) => {
-			const urlGetUserByEmail = `http://localhost:3000/users/email/${email}`
+			const urlGetUserByEmail = `https://featherworld.cloudxier.com/users/email/${email}`
 			// Get user by email from database
 			axios({
 				method: 'get',

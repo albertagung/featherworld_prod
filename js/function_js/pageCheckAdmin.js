@@ -1,7 +1,7 @@
 $(document).ready(() => {
 
 	// Check credentials
-	let checkCredentialsUrl = 'http://localhost:3000/auth/checkAdmin'
+	let checkCredentialsUrl = 'https://featherworld.cloudxier.com/auth/checkAdmin'
 	axios.get(checkCredentialsUrl)
 	.then((response) => {
 		// Set logged in user data in localStorage

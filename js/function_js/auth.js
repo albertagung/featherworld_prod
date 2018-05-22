@@ -1,7 +1,7 @@
 $(document).ready(() => {
 
 	// Define auth url
-	const authUrl = 'http://localhost:3000/auth'
+	const authUrl = 'https://featherworld.cloudxier.com/auth'
 
 	// Get email and pass for login
 	getCredentials = () => {
@@ -66,7 +66,7 @@ $(document).ready(() => {
 			// Check if user has logged in or not
 			if (objUserEmail) {
 				// Check credentials
-				let checkCredentialsUrl = 'http://localhost:3000/auth/check'
+				let checkCredentialsUrl = 'https://featherworld.cloudxier.com/auth/check'
 				axios.post(checkCredentialsUrl, objUserEmail)
 				.then((response) => {
 					console.log(response.data)

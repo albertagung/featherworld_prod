@@ -4,10 +4,10 @@ $(document).ready(() => {
 	$.LoadingOverlay('show')
 
 	// Define url get shipping methods
-	const urlGetShippingMethods = 'http://localhost:3000/shippingMethod'
+	const urlGetShippingMethods = 'https://featherworld.cloudxier.com/shippingMethod'
 
 	// Define url get province data
-	const urlGetProvince = 'http://localhost:3000/shipping/province'
+	const urlGetProvince = 'https://featherworld.cloudxier.com/shipping/province'
 
 	// Define url get countries data
 	const urlGetCountries = 'https://restcountries.eu/rest/v2/all?fields=name'
@@ -133,7 +133,7 @@ $(document).ready(() => {
 			// Define provinceId
 			let provinceId = $('#provinceInput').val()
 			// Define url get cities
-			let urlGetCities = `http://localhost:3000/shipping/city/${provinceId}`
+			let urlGetCities = `https://featherworld.cloudxier.com/shipping/city/${provinceId}`
 			axios({
 				method: 'get',
 				url: urlGetCities
@@ -168,7 +168,7 @@ $(document).ready(() => {
 			// Define cityId
 			let cityId = $('#cityInput').val()
 			// Define url get subdistrict
-			let urlGetSubdistrict = `http://localhost:3000/shipping/subdistrict/${cityId}`
+			let urlGetSubdistrict = `https://featherworld.cloudxier.com/shipping/subdistrict/${cityId}`
 			axios({
 				method: 'get',
 				url: urlGetSubdistrict
@@ -199,7 +199,7 @@ $(document).ready(() => {
 		// Empty previous data
 		$('#shippingMethodInput').empty()
 		// Define url get shipping methods (from global settings object)
-		const urlGetGlobalSettings = 'http://localhost:3000/globalSetting'
+		const urlGetGlobalSettings = 'https://featherworld.cloudxier.com/globalSetting'
 		axios({
 			method: 'get',
 			url: urlGetGlobalSettings
@@ -274,9 +274,9 @@ $(document).ready(() => {
 			// Loading overlay start
 			$.LoadingOverlay('show')
 			// Define url calculate cost
-			const urlGetShippingCost = 'http://localhost:3000/shipping/cost'
+			const urlGetShippingCost = 'https://featherworld.cloudxier.com/shipping/cost'
 			// Define url get shipping methods (from global settings object)
-			const urlGetGlobalSettings = 'http://localhost:3000/globalSetting'
+			const urlGetGlobalSettings = 'https://featherworld.cloudxier.com/globalSetting'
 			// Get total product weight
 			getTotalProductWeight().then((productWeight) => {
 				// Get shipping origin from global settings
@@ -538,11 +538,11 @@ $(document).ready(() => {
 		$.LoadingOverlay('show')
 		return new Promise ((resolve, reject) => {
 			// Define update user transaction histories by id url
-			let urlUpdateUserTransactionHistories = `http://localhost:3000/users/edit/transaction/${dataUser._id}`
+			let urlUpdateUserTransactionHistories = `https://featherworld.cloudxier.com/users/edit/transaction/${dataUser._id}`
 			// Insert new transaction (first order)
-			let urlUpdateUserDeliveryAddress = `http://localhost:3000/users/edit/deliveryAddress/${dataUser._id}`
+			let urlUpdateUserDeliveryAddress = `https://featherworld.cloudxier.com/users/edit/deliveryAddress/${dataUser._id}`
 			// Define insert new transaction
-			let urlPostNewTransaction = 'http://localhost:3000/transactions'
+			let urlPostNewTransaction = 'https://featherworld.cloudxier.com/transactions'
 			// Define update user delivery address by id url
 			getTransactionValue().then((dataTransaction) => {
 				// Send data transaction into database
@@ -588,7 +588,7 @@ $(document).ready(() => {
 	getArrayProductQty = (cartArray) => {
 		return new Promise ((resolve, reject) => {
 			// Define url get product by id
-			let urlGetProductById = `http://localhost:3000/products`
+			let urlGetProductById = `https://featherworld.cloudxier.com/products`
 			// Get product from database
 			axios({
 				method: 'get',

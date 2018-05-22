@@ -17,7 +17,7 @@ $(document).ready(() => {
 		$.LoadingOverlay('show')
 		return new Promise ((resolve, reject) => {
 			// Define url mailchimp
-			const urlMailchimpNewSubscribe = 'http://localhost:3000/mailchimp/subscribe'
+			const urlMailchimpNewSubscribe = 'https://featherworld.cloudxier.com/mailchimp/subscribe'
 			// Send with axios
 			axios({
 				method: 'post',
@@ -43,9 +43,9 @@ $(document).ready(() => {
 		$.LoadingOverlay('show')
 		return new Promise ((resolve, reject) => {
 			// Define url email new subscriber to admin
-			const urlEmailSubscriberAdmin = 'http://localhost:3000/email/adminNewSubscriber'
+			const urlEmailSubscriberAdmin = 'https://featherworld.cloudxier.com/email/adminNewSubscriber'
 			// Define url email new subscriber to customer
-			const urlEmailSubscriberCustomer = 'http://localhost:3000/email/newNewsletter'
+			const urlEmailSubscriberCustomer = 'https://featherworld.cloudxier.com/email/newNewsletter'
 			// Axios send to admin
 			axios({
 				method: 'post',

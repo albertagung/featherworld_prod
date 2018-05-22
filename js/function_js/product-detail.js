@@ -133,7 +133,7 @@ $(document).ready(() => {
 		// Loading overlay start
 		$('#productRecommendation').LoadingOverlay('show')
 		// Define url get products by category
-		let urlGetProductByCategory = `http://localhost:3000/products/category/${dataProduct.productCategory}`
+		let urlGetProductByCategory = `https://featherworld.cloudxier.com/products/category/${dataProduct.productCategory}`
 		// Get data from db
 		axios({
 			method: 'get',

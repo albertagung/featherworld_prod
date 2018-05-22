@@ -3,7 +3,7 @@ $(document).ready(() => {
 	// Get data user by email from database (promise)
 	getUserByEmail = (email) => {
 		return new Promise  ((resolve, reject) => {
-			const urlGetUserByEmail = `http://localhost:3000/users/email/${email}`
+			const urlGetUserByEmail = `https://featherworld.cloudxier.com/users/email/${email}`
 			// Get user by email from database
 			axios({
 				method: 'get',

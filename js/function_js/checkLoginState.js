@@ -40,7 +40,7 @@ $(document).ready(() => {
 	requestTransactionById = (transactionId) => {
 		return new Promise ((resolve, reject) => {
 			// Define url get transaction by transaction id
-			let urlGetTransactionByTransactionId = `http://localhost:3000/transactions/order_id/${transactionId}`
+			let urlGetTransactionByTransactionId = `https://featherworld.cloudxier.com/transactions/order_id/${transactionId}`
 			// Get transaction from database
 			axios({
 				method: 'get',
@@ -129,7 +129,7 @@ $(document).ready(() => {
 	// Get data user by email from database (promise)
 	findUserByEmail = (email) => {
 		return new Promise  ((resolve, reject) => {
-			const urlGetUserByEmail = `http://localhost:3000/users/email/${email}`
+			const urlGetUserByEmail = `https://featherworld.cloudxier.com/users/email/${email}`
 			// Get user by email from database
 			axios({
 				method: 'get',

@@ -15,7 +15,7 @@ $(document).ready(() => {
 			// Define parsedSubdistrictId
 			let parsedSubdistrictId = ''
 			// Define url get province
-			let urlGetProvince = 'http://localhost:3000/shipping/province'
+			let urlGetProvince = 'https://featherworld.cloudxier.com/shipping/province'
 			// Get province
 			axios({
 				method: 'get',
@@ -33,7 +33,7 @@ $(document).ready(() => {
 					}
 				})
 				// Define url get city by province id
-				let urlGetCityByProvinceId = `http://localhost:3000/shipping/city/${provinceId}`
+				let urlGetCityByProvinceId = `https://featherworld.cloudxier.com/shipping/city/${provinceId}`
 				// Get city
 				axios({
 					method: 'get',
@@ -51,7 +51,7 @@ $(document).ready(() => {
 						}
 					})
 					// Define url get subdistrict by city id
-					let urlGetSubdistrictByCityId = `http://localhost:3000/shipping/subdistrict/${cityId}`
+					let urlGetSubdistrictByCityId = `https://featherworld.cloudxier.com/shipping/subdistrict/${cityId}`
 					// Get subdistricts
 					axios({
 						method: 'get',
@@ -153,7 +153,7 @@ $(document).ready(() => {
 	requestTransactionByIdHistoriesPage = (transactionId) => {
 		return new Promise ((resolve, reject) => {
 			// Define url get transaction by transaction id
-			let urlGetTransactionByTransactionId = `http://localhost:3000/transactions/order_id/${transactionId}`
+			let urlGetTransactionByTransactionId = `https://featherworld.cloudxier.com/transactions/order_id/${transactionId}`
 			// Get transaction from database
 			axios({
 				method: 'get',

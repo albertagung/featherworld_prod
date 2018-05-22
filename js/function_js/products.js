@@ -4,7 +4,7 @@ $(document).ready(() => {
 	$.LoadingOverlay('show')
 
 	// Define url get all products
-	const urlGetAllProducts = 'http://localhost:3000/products'
+	const urlGetAllProducts = 'https://featherworld.cloudxier.com/products'
 
 	// Populate category (to be placed in category selection)
 	populateCategorySelector = (unfilterCategories) => {

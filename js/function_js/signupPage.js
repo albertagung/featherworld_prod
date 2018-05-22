@@ -1,7 +1,7 @@
 $(document).ready(() => {
 	
 	// Define sign up url
-	const signUpUrl = 'http://localhost:3000/auth/signup'
+	const signUpUrl = 'https://featherworld.cloudxier.com/auth/signup'
 
 	// Datepicker init for birthday field
 	$('#birthdayInput').datepicker({
@@ -82,7 +82,7 @@ $(document).ready(() => {
 	// Insert registered user to database (called in firebaseSignUp function)
 	insertUserToDatabase = () => {
 		// Define url post new user
-		const urlPostNewUser = 'http://localhost:3000/users'
+		const urlPostNewUser = 'https://featherworld.cloudxier.com/users'
 		axios({
 			method: 'post',
 			url: urlPostNewUser,
@@ -138,9 +138,9 @@ $(document).ready(() => {
 		$.LoadingOverlay('show')
 		return new Promise ((resolve, reject) => {
 			// Define url send signup email to admin
-			const urlEmailSignupAdmin = 'http://localhost:3000/email/adminNewSignup'
+			const urlEmailSignupAdmin = 'https://featherworld.cloudxier.com/email/adminNewSignup'
 			// Define url send signup email to customer
-			const urlEmailSignupCustomer = 'http://localhost:3000/email/customerNewSignup'
+			const urlEmailSignupCustomer = 'https://featherworld.cloudxier.com/email/customerNewSignup'
 			// Axios send to admin
 			axios({
 				method: 'post',

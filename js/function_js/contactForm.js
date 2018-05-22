@@ -18,7 +18,7 @@ $(document).ready(() => {
 		$.LoadingOverlay('show')
 		return new Promise ((resolve, reject) => {
 			// Define url nodemailer send contact form
-			const urlSendContactForm = 'http://localhost:3000/email/contactForm'
+			const urlSendContactForm = 'https://featherworld.cloudxier.com/email/contactForm'
 			// Send email with axios
 			axios({
 				method: 'post',
