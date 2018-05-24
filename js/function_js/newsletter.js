@@ -70,7 +70,7 @@ $(document).ready(() => {
 						subscriberLastName: 'Featherworld', // Hardcoded because there are no name fields
 						emailPicture: 'https://storage.googleapis.com/image_props_featherworld/cloudxier-featherworld-mainbanner.png', // Hardcode, change when needed
 						emailText: 'Thanks for subscribing us!',
-						shopNowButtonLink: 'http://localhost:8080/product-page.html' // Hardcode, change when needed
+						shopNowButtonLink: 'https://featherworld-dev.clouxier.com/product-page.html' // Hardcode, change when needed
 					}
 				})
 				.then((responseCustomer) => {

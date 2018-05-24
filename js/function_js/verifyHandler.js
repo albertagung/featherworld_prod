@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	let redirectPageObject = JSON.parse(localStorage.getItem('redirectPage'))
 	let redirectPage = redirectPageObject.redirectPage
 
-  // TODO: Implement getParameterByName()
-
   getParameterByName = (name) => {
   	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results==null){

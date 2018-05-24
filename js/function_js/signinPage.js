@@ -31,8 +31,12 @@ $(document).ready(() => {
 
 	// Sign in with firebase (called in signInUser)
 	firebaseSignIn = (email, password) => {
+		// Loading overlay start
+		$.LoadingOverlay('show')
 		firebase.auth().signInWithEmailAndPassword(email, password)
 		.then(() => {
+			// Loading overlay stop
+			$.LoadingOverlay('hide')
 			// Swall alert
 			swal('Success', 'Thanks for signing in!', 'success')
 			.then(() => {
@@ -48,6 +52,8 @@ $(document).ready(() => {
 			})
 		})
 		.catch((err) => {
+			// Loading overlay stop
+			$.LoadingOverlay('hide')
 			console.log('err', err)
 			// Catch if error (username or password wrong)
 			if (err.code === 'auth/invalid-email') {
@@ -128,7 +134,7 @@ $(document).ready(() => {
 	}
 
 	// On load function
-	// checkLoginState()
+	checkLoginState()
 	resetPassword()
 
 

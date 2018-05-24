@@ -771,7 +771,7 @@ $(document).ready(() => {
 							// Empty localStorage function
 							emptyLocalStorage()
 							// Redirect page with new query string
-							window.location.replace(`http://127.0.0.1:55445/?${queryString}`)
+							window.location.replace(`https://pg-featherworld.cloudxier.com/?${queryString}`)
 						})
 					})
 				}

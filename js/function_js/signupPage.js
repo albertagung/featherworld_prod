@@ -3,6 +3,21 @@ $(document).ready(() => {
 	// Define sign up url
 	const signUpUrl = 'https://featherworld.cloudxier.com/auth/signup'
 
+	// Check if a user already sign in
+	firebase.auth().onAuthStateChanged((user) => {
+		// If a user was signed in
+		if (user) {
+			// Define previous page
+			let previousPage = JSON.parse(localStorage.getItem('redirectPage'))
+			// If previous page available, redirect to that page
+			if (previousPage) {
+				window.location.replace(previousPage.redirectPage)
+			} else {
+				window.location.replace('index.html')
+			}
+		}
+	})
+
 	// Datepicker init for birthday field
 	$('#birthdayInput').datepicker({
 		changeMonth: true,
@@ -167,7 +182,7 @@ $(document).ready(() => {
 						customerFirstName: customerFirstName,
 						customerLastName: customerLastName,
 						emailPicture: 'https://storage.googleapis.com/image_props_featherworld/cloudxier-featherworld-mainbanner.png', // Hardcoded and have to change manually
-						shopNowButtonLink: 'http://localhost:8080/product-page.html' // Hardcoded and have to change manually
+						shopNowButtonLink: 'https://featherworld-dev.clouxier.com/product-page.html' // Hardcoded and have to change manually
 					}
 				})
 				.then((responseCustomer) => {
