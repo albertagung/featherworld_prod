@@ -51,7 +51,7 @@ $(document).ready(() => {
 		            </a>
 		            <div class="title">
 		              <h5 class="mb0">${eachData.productName}</h5>
-		              <span class="display-block mb16">${'IDR' + ' ' + eachData.productPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}</span>
+		              <span class="display-block mb16">${'IDR' + ' ' + dataProducts.productDiscountPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") || 'IDR' + ' ' + dataProducts.productPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}</span>
 		            </div>
 		          </div>
 		        </div>
@@ -68,7 +68,7 @@ $(document).ready(() => {
 	            </a>
 	            <div class="title">
 	              <h5 class="mb0">${eachData.productName}</h5>
-	              <span class="display-block mb16">${'IDR' + ' ' + eachData.productPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}</span>
+	              <span class="display-block mb16">${'IDR' + ' ' + dataProducts.productDiscountPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") || 'IDR' + ' ' + dataProducts.productPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}</span>
 	            </div>
 	          </div>
 	        </div>
@@ -115,7 +115,7 @@ $(document).ready(() => {
 	            </a>
 	            <div class="title">
 	              <h5 class="mb0">${eachData.productName}</h5>
-	              <span class="display-block mb16">${'IDR' + ' ' + eachData.productPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}</span>
+	              <span class="display-block mb16">${'IDR' + ' ' + dataProducts.productDiscountPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") || 'IDR' + ' ' + dataProducts.productPrice.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}</span>
 	            </div>
 	          </div>
 	        </div>
